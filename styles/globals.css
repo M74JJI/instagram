@@ -29,3 +29,9 @@
     width: 400px;
     height: 400px;
 }
+.moveRight {
+    transform: translateX(-100%);
+}
+.moveLeft {
+    transform: translateX(100%);
+}

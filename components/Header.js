@@ -25,21 +25,26 @@ function Header() {
                     onCLick={() => router.push('/')}
                     className="relative hidden lg:inline-grid h-24 w-24"
                 >
-                    <Image
-                        src="https://links.papareact.com/ocw"
-                        layout="fill"
-                        objectFit="contain"
-                    />
+                    <a href="/">
+                        {' '}
+                        <Image
+                            src="https://links.papareact.com/ocw"
+                            layout="fill"
+                            objectFit="contain"
+                        />
+                    </a>
                 </div>
                 <div
                     onCLick={() => router.push('/')}
                     className="relative h-10 w-10 lg:hidden flex-shrink-0"
                 >
-                    <Image
-                        src="https://links.papareact.com/jjm"
-                        layout="fill"
-                        objectFit="contain"
-                    />
+                    <a href="/">
+                        <Image
+                            src="https://links.papareact.com/jjm"
+                            layout="fill"
+                            objectFit="contain"
+                        />
+                    </a>
                 </div>
                 {/*search*/}
                 <div className="max-w-xs ">
@@ -57,20 +62,22 @@ function Header() {
                 {/* nav*/}
 
                 <div className="flex items-center justify-end space-x-4">
-                    <svg
-                        onCLick={() => router.push('/')}
-                        className="navIcon"
-                        aria-label="Home"
-                        class="_8-yf5 "
-                        color="#262626"
-                        fill="#262626"
-                        height="22"
-                        role="img"
-                        viewBox="0 0 48 48"
-                        width="22"
-                    >
-                        <path d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"></path>
-                    </svg>
+                    <a href="/">
+                        <svg
+                            onCLick={() => router.push('/')}
+                            className="navIcon"
+                            aria-label="Home"
+                            class="_8-yf5 "
+                            color="#262626"
+                            fill="#262626"
+                            height="22"
+                            role="img"
+                            viewBox="0 0 48 48"
+                            width="22"
+                        >
+                            <path d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"></path>
+                        </svg>
+                    </a>
                     <MenuIcon className="w-6 md:hidden cursor-pointer" />
                     {session ? (
                         <>
@@ -146,7 +153,6 @@ function Header() {
                                 </svg>
                             </div>
                             <img
-                                onClick={signOut}
                                 src={session?.user?.image}
                                 alt=""
                                 className="h-10 w-10 rounded-full cursor-pointer object-cover"

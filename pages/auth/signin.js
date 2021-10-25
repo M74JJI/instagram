@@ -17,16 +17,23 @@ function signin({ providers }) {
                             alt=""
                         />
                         <div className="mt-7 flex flex-col space-y-5">
+                            {' '}
                             {Object.values(providers).map((provider) => (
                                 <div key={provider.name}>
                                     <button
-                                        className="p-3 bg-[#f99d4c] rounded-lg text-white"
+                                        className="flex items-center  p-3 bg-white rounded-lg text-black border shadow-sm font-bold"
                                         onClick={() =>
                                             SignInProvider(provider.id, {
                                                 callbackUrl: '/',
                                             })
                                         }
                                     >
+                                        {' '}
+                                        <img
+                                            className="w-10 mr-2"
+                                            src="http://assets.stickpng.com/images/5847f9cbcef1014c0b5e48c8.png"
+                                            alt=""
+                                        />{' '}
                                         Sign in with {provider.name}
                                     </button>
                                 </div>
